@@ -16,6 +16,8 @@
 
 ***Adecuar en swagger logins y enviar credencials en los headers
 
+***logs y manejos de errores en los request
+
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 -- FrontEnd ANGULAAR
 --COSAS POR HACERRRRRR

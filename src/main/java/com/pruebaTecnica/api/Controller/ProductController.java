@@ -22,12 +22,12 @@ public class ProductController {
     private final String RoleErrorMsg =  "Este servicio solamente esta disponible para administradores";
 
     @PostMapping
-    public ResponseEntity<Object> create(@RequestBody ProductDTO dto, Long idUser) {
+    public ResponseEntity<Object> create(@RequestBody ProductDTO dto) {
     
-        boolean isAdmin = userService.getUserRole(idUser).equals("Admin");
-        return isAdmin ? 
-            ResponseEntity.ok().body(productService.create(dto)) : 
-            ResponseEntity.badRequest().body(RoleErrorMsg);    
+        //boolean isAdmin = userService.getUserRole(idUser).equals("Admin");
+        //return isAdmin ? 
+         return  ResponseEntity.ok().body(productService.create(dto));
+        //    ResponseEntity.badRequest().body(RoleErrorMsg);    
     }
 
     @PatchMapping("/{id}/user/{userId}")
