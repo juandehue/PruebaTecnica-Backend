@@ -1,4 +1,4 @@
-package com.pruebaTecnica.api.Controller;
+package com.pruebaTecnica.api.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
