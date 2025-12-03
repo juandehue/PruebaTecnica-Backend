@@ -1,0 +1,50 @@
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+-- Backend Springboot
+--COSAS POR HACERRRRRR
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+***Administradores para crear, actualizar y eliminar productos y otros a usuarios --> SE RESOLVERA EN EL FRONT
+***Usuarios anonimos que solo puedan obtener información de los productos pero no puedan realizar cambios.--> SE RESOLVERA EN EL FRONT
+
+***adecuar respuesas de endpoint a responseEntity<>
+**Agregar documenacion de swagger a los endpoints
+
+***Habilitar actuator (healthcheck endpoint e info endpoint)
+***verificar en entidad de rol si es necesaria las validaciones por ser insert manuales por el momento(no hay endpoint a usar )
+
+***En cada request extraer el roleId de los headers
+
+***Adecuar en swagger logins y enviar credencials en los headers
+
+***logs y manejos de errores en los request
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+-- FrontEnd ANGULAAR
+--COSAS POR HACERRRRRR
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+El front mosrara los endpoints de acuerdo al tipo de usuario, la visibilidad de los servicios/endpoints estara dfinida con la directiva
+ng-template de angular --> TERMINAR
+
+****Login solo validara que correo y contra sea correcto, retornara 200 y redirige al menuDashboard y 403 arroja un toast de error(?, guardar en localstorage una bandera de login true = logeado, false = no_logeado (ng-template te mostrara la vista de acuerdo a este status o bandera) --> TERMINAR
+
+**En el login guardar en localstorage, el roleId, id usuario,email y nombre --> LISTOOO
+
+En angular crear un interceptor para tomar las credencials del LS y mandarlas como header en cada request para la validacion de usuarios--> TERMINAR
+
+
+
+
+==OBTENER EL ROL EN CUALQUIER LADO DE ANGULAR POR ESTAR EN LS
+const roleName = localStorage.getItem('roleName');
+const roleId = localStorage.getItem('roleId');
+
+tipo 1 = admin
+juan@example.com
+password123
+
+
+tipo 2 = usuario
+juaneee@example.com
+password123
+
