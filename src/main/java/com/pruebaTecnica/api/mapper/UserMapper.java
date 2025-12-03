@@ -1,6 +1,10 @@
 package com.pruebaTecnica.api.mapper;
 
 import com.pruebaTecnica.api.dto.UserDTO;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import com.pruebaTecnica.api.dto.UserCreateDTO;
 import com.pruebaTecnica.api.entity.UserEntity;
 
@@ -24,4 +28,13 @@ public class UserMapper {
         dto.setRoleName(u.getRole().getName());
         return dto;
     }
+
+    public static List<UserDTO> toDTOList(List<UserEntity> users) {
+        List<UserDTO> dtoList = new ArrayList<>();
+        for (UserEntity user : users) {
+            dtoList.add(toDTO(user));
+        }
+        return dtoList;
+    }
+
 }
